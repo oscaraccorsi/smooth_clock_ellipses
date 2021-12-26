@@ -3,6 +3,7 @@ var height;
 var upupa;
 
 
+
 function preload() {
   upupa = loadSound("assets/upupa.mp3");
 }
@@ -10,13 +11,18 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
- 
- 
-  
+  textSize(150);
+  text('oscaraccorsi, 2021', windowWidth/2, windowHeight/2);
+  stroke(5);
+  fill(255, 255, 0, 50);  
 }
 
 function draw() {
   background(0);
+  textSize(20);
+  text('oscaraccorsi, 2021', windowWidth-200, windowHeight-30);
+  noStroke();
+  fill(255, 255, 255, 100);
   translate(width / 2, height / 2);
   rotate(-90);
   let d = new Date();
@@ -79,6 +85,12 @@ function draw() {
   rotate(-hourAngle);
   ellipse(0 - windowWidth / 8, 0, windowWidth / 3, windowHeight / 4);
   pop();
+  fill(100);
+  noStroke();
+ 
+  
+  
+  
   
   
   if (secAngle <= 0.2) {
